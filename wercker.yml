@@ -4,8 +4,8 @@ services:
 build:
   steps:
     - bundle-install
-    - rails-database-yml
-      service: postgresql
+    - rails-database-yml:
+        service: postgresql
     - script:
         name: psql version
         code: psql --version
